@@ -1,0 +1,11 @@
+@layer components {
+  .section-container {
+    @apply container px-5 py-16 mx-auto;
+  }
+  .section-flex {
+    @apply flex flex-wrap -m-4;
+  }
+  .section-grid {
+    @apply my-10 w-auto grid grid-cols-4 grid-flow-row gap-4 justify-items-center;
+  }
+}

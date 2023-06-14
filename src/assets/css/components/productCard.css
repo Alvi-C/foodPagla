@@ -1,0 +1,30 @@
+@layer components {
+  .card {
+    @apply font-Poppins h-96 xl:w-1/4 md:w-1/2 p-4;
+  }
+
+  .card-style {
+    @apply p-4 rounded-md hover:shadow-sm hover:border hover:border-green-300 hover:duration-500;
+  }
+  .card-img {
+    @apply h-40 rounded-sm w-full object-cover object-center mb-6;
+  }
+  .card-title {
+    @apply text-lg text-gray-900 font-bold mb-1;
+  }
+  .card-subtitle {
+    @apply tracking-widest text-xs text-gray-700 font-normal mb-4;
+  }
+  .card-text {
+    @apply leading-relaxed text-sm text-gray-800 mb-5;
+  }
+  .card-items {
+    @apply flex justify-between mb-4 text-sm font-Roboto font-light;
+  }
+  .card-ratings {
+    @apply bg-schoolBusYellow px-1 rounded-sm;
+  }
+  .card-btn {
+    @apply flex-shrink-0 text-white bg-green-500 border-0 py-1 px-8 focus:outline-none hover:bg-green-600 rounded text-sm mt-10 sm:mt-0;
+  }
+}
