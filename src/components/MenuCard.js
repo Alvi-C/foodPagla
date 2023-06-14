@@ -1,9 +1,12 @@
-import { CDN_URL } from "../utils/constants";
+import { CDN_URL, defaultImage } from "../utils/constants";
 import { useState } from "react";
 
 const MenuCard = ({ item }) => {
-    // console.log(item.card.info);
+    console.log(item.card.info);
     const { imageId, category, itemAttribute, name, description, price, defaultPrice } = item?.card?.info
+
+    const imageUrl = `${CDN_URL}${imageId}`;
+
 
     const [quantity, setQuantity] = useState(1);
 
@@ -21,7 +24,7 @@ const MenuCard = ({ item }) => {
         <div className="my-7">
             <div className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-sm p-3 max-w-xs md:max-w-3xl mx-auto border border-slate-100 bg-white">
                 <div className="w-full md:w-1/3 bg-white grid place-items-center">
-                    <img src={CDN_URL + imageId} alt="" className="rounded-xl" />
+                    <img src={imageId ? imageUrl : defaultImage} alt="" className="rounded-xl" />
                 </div>
                 <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
                     <div className="flex justify-between item-center">
