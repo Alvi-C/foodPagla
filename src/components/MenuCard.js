@@ -6,6 +6,7 @@ const MenuCard = ({ item }) => {
     const { imageId, category, itemAttribute, name, description, price, defaultPrice } = item?.card?.info
 
     const imageUrl = `${CDN_URL}${imageId}`;
+    const noDescription = "no description is available right now. It will be updated soon";
 
 
     const [quantity, setQuantity] = useState(1);
@@ -40,7 +41,7 @@ const MenuCard = ({ item }) => {
                         {name}
                     </h3>
                     <p className="md:text-sm text-gray-500">
-                        {description}
+                        {description ? description : noDescription}
                     </p>
                     <div className="flex justify-between pt-4">
                         <p className="md:text-2xl font-black text-barbiePink">
